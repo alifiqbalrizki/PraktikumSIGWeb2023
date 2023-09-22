@@ -1,0 +1,196 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Peta Bidang Tanah DTNTF FT UGM</title> 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <style> 
+        h3 {
+        border: 7px solid rgb(49, 49, 49);
+        text-align: center;
+        width: 1475px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-right: 150px;
+        margin-left: 25px;
+        background-color: rgb(50, 50, 50);
+        }
+        html, body, section
+        {
+        position: relative;
+        height: 100%;
+        background-color: #ffffff;
+        }
+        html   {scroll-behavior: smooth;}
+        #map {
+        width: 1475px;
+        height: 550px;
+        margin-left: 25px;
+        }
+
+        body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+        body {font-size:16px;}
+        .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+        .w3-half img:hover{opacity:1}
+        
+        #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 200%;
+        }
+        </style> 
+    </head> 
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">
+            </span></a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <button
+            class="btn btn-outline-success my-2 my-sm-0">
+            My Location
+            </button>
+            </form>
+            </div>
+        </nav>
+
+        <h3 style="color:rgb(255, 255, 255);"><b>PETA BIDANG TANAH DTNTF FT UGM</b></h3>
+        <div id="map"></div>
+        <script src="DTNTFWGS.js"></script>
+        <script>
+        
+        var map = L.map('map',{
+        center: [-7.766375420999964, 110.372769390000087],
+        zoom: 50
+        });
+
+        var BDG3001 = L.marker([-7.766740336999931,
+        110.373248520000061]).bindPopup('Kode Titik: ' + '<strong>' +'BDG3001' + '</strong>'),
+
+        BDG3004 = L.marker([-7.766532255999948,
+        110.373133491000033]).bindPopup('Kode Titik: ' + '<strong>' +'BDG3004' + '</strong>'),
+
+        BDG2001 = L.marker([-7.766691239999943,
+        110.373085427000035]).bindPopup('Kode Titik: ' + '<strong>' +'BDG2001' + '</strong>'),
+
+        BDG3005 = L.marker([-7.766537158999938,
+        110.373259895000047]).bindPopup('Kode Titik: ' + '<strong>' +'BDG3005' + '</strong>'),
+
+        BDG3002 = L.marker([-7.7662805439999268,
+        110.373377209000068]).bindPopup('Kode Titik: ' + '<strong>' +'BDG3002' + '</strong>'),
+
+        BDG3006 = L.marker([-7.766271179999933,
+        110.373344553000038]).bindPopup('Kode Titik: ' + '<strong>' +'BDG3006' + '</strong>'),
+
+        BDG4002 = L.marker([-7.766043387999957,
+        110.372648585000036]).bindPopup('Kode Titik: ' + '<strong>' +'BDG4002' + '</strong>'),
+
+        BDG1002 = L.marker([-7.766028821999953,
+        110.372586283000089]).bindPopup('Kode Titik: ' + '<strong>' +'BDG1002' + '</strong>'),
+
+        BDG5001 = L.marker([-7.766059609999957,
+        110.372700710000061]).bindPopup('Kode Titik: ' + '<strong>' +'BDG5001' + '</strong>'),
+
+        BDG5002 = L.marker([-7.766110282999932,
+        110.372858611000083]).bindPopup('Kode Titik: ' + '<strong>' +'BDG5002' + '</strong>'),
+
+        BDG5003 = L.marker([-7.765997146999950,
+        110.372895411000059]).bindPopup('Kode Titik: ' + '<strong>' +'BDG5003' + '</strong>'),
+
+        BDG1005 = L.marker([-7.766375420999964,
+        110.372769390000087]).bindPopup('Kode Titik: ' + '<strong>' +'BDG1005' + '</strong>'),
+
+        BDG1006 = L.marker([-7.766312168999946,
+        110.372555764000083]).bindPopup('Kode Titik: ' + '<strong>' +'BDG1006' + '</strong>'),
+
+        BDG5004 = L.marker([-7.765951023999946,
+        110.372739733000060]).bindPopup('Kode Titik: ' + '<strong>' +'BDG5004' + '</strong>'),
+
+        BDG1003 = L.marker([-7.766428690999930,
+        110.372418112000048]).bindPopup('Kode Titik: ' + '<strong>' +'BDG1003' + '</strong>'),
+
+        BDG1004 = L.marker([-7.766507049999973,
+        110.372731169000076]).bindPopup('Kode Titik: ' + '<strong>' +'BDG1004' + '</strong>');
+
+        var PBT = L.layerGroup([BDG3001,BDG3004,BDG2001,BDG3005,BDG3002,BDG3006,BDG4002,BDG1002,BDG5001,BDG5002,BDG5003,BDG1005,BDG1006,BDG5004,BDG1003,BDG1004]);
+
+        var overlayMaps = {
+        "Titik Bidang Tanah": PBT
+        };
+
+        L.geoJSON(teknik,{
+                style: function(feature) {
+                switch (feature.properties.Nomor) {
+                case '001': return {color: "red"};
+                case '002': return {color: "green"};
+                case '003': return {color: "yellow"};
+                case '004': return {color: "blue"};
+                case '005': return {color: "#ff9900"};
+                }
+                },
+                onEachFeature: function (feature, layer) {
+                layer.bindPopup(
+                'Nomor Bidang: ' + '<strong>' + feature.properties.Nomor +'</strong>' + '<br>' + 
+                'Luas Bidang (m2):' + '<strong>' + feature.properties.Luas_Bidan +'</strong>'
+                );
+                }
+            })
+                .addTo(map);
+
+        var google = L.tileLayer('https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', 
+        {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA,USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+        })
+        .addTo(map);
+        
+        var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 50,
+            attribution: '© OpenStreetMap'
+        });
+
+        var osmHOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            maxZoom: 50,
+            attribution: '© OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team hosted by OpenStreetMap France'});
+
+        var openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            maxZoom: 50,
+            attribution: 'Map data: © OpenStreetMap contributors, SRTM | Map style: © OpenTopoMap (CC-BY-SA)'
+        });
+
+        var baseMaps = {
+            "Google Satellite Map": google,
+            "OpenStreetMap": osm,
+            "OpenStreetMap.HOT": osmHOT,
+            "OpenTopoMap": openTopoMap
+        };
+
+        var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+       </script>
+       <script
+       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+       crossorigin="anonymous">
+       </script> 
+    </body> 
+</html>
