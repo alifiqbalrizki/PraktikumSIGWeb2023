@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Praktikum SIG Web Minggu ke-3 - Alif Iqbal Rizki H. - 20/460242/TK/50831</title>
+	<meta charset=”utf-8″>	
+</head>
+
+<body>
+    <h1>Validasi Umur dan Pengkategoriannya!</h1>
+    <p>Coba masukkan nama dan umur Anda : </p>
+    Nama : <input type="text" id="nama" style="margin-left: 12px; margin-bottom: 12px"> <br>
+    Umur : <input type="text" id="umur" style="margin-left: 12px; margin-bottom: 12px"> <br>
+
+    <button onclick="coba()">Click!</button>
+    <script>
+        function coba(){
+            var asma, yuswa, teks;
+            asma = document.getElementById("nama").value;
+            yuswa = document.getElementById("umur").value;
+
+            if (asma == ""  && yuswa == "")  {
+                teks = "Isikan nama dan umur dulu!";
+                alert(teks);
+            }
+
+            else if (asma == "" )  {
+                teks = "Isikan nama dulu!";
+                alert(teks);
+            }
+
+            else if (yuswa == ""){
+                teks = "isikan umur dulu!";
+                alert(teks);
+            }
+
+            else if(yuswa <=0){
+                teks = "Anda Game Over!";
+                alert(teks);
+            }
+            
+            else if(yuswa > 0 && yuswa < 5){
+                teks = "Anda masih bayi";
+                alert(teks);
+            }
+
+            else if(yuswa <= 15){
+                teks = "Anda masih anak-anak";
+                alert(teks);
+            }
+
+            else if(yuswa <= 30){
+                teks = "Anda masih remaja";
+                alert(teks);
+            }
+
+            else if(yuswa <=60){
+                teks = "Anda sudah dewasa";
+                alert(teks);
+            }
+
+            else{
+                teks = "Anda sudah lansia";
+                alert(teks);
+            }
+
+        }
+    </script>
+</body>
+</html>

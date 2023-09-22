@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Praktikum SIG Web Minggu ke-3 - Alif Iqbal Rizki H. - 20/460242/TK/50831</title>
+	<meta charset=”utf-8″>
+	
+</head>
+<body>
+        <h1>Menghitung faktorial dari input</h1>
+        <p>Coba masukkan sembarang angka:</p>
+
+        <div id="angkainput" style="float: left;">
+          <input type="text" id="angka">
+        </div>
+
+        <div id="click" style="float:left; margin-left: 12px;">
+            <button  onclick="faktorial()"> Click! </button>
+        </div>
+        <br>
+
+        <p id="hasil"></p>
+        <script>
+            function faktorial(){
+                var a, masukan, x;
+                x = 1;
+                masukan = document.getElementById("angka").value;
+
+                for(a = 1; a <= masukan; a++) {
+                    x = x * a;
+                }
+
+                document.getElementById("hasil").innerHTML =
+                "Hasil faktorial dari angka " + masukan + " adalah: " + x ;
+            }
+        </script>
+</body>
+</html>

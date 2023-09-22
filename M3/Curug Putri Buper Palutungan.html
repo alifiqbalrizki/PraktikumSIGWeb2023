@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Praktik 2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Garamond, Helvetica;
+}
+
+/* Style the header */
+header {
+  background-color: rgb(17, 0, 60);
+  padding: 20px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: LightGray;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 55%;
+  background-color: rgb(255, 255, 255);
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+image {
+  float: left;
+  padding: 20px;
+  width: 30%;
+  background-color: rgb(17, 0, 60);
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgb(17, 0, 60);
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Destinasi Wisata Desa Cisantana</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+        <li><a href="Ekowisata Curug Sawer.html">Ekowisata Curug Sawer</a></li>
+        <li><a href="Taman Cisantana.html">Taman Cisantana</a></li>
+        <li><a href="Sukageuri View.html">Sukageuri View</a></li>
+        <li><a href="Goa Maria Fatimah Sawer Rahmat.html">Goa Maria Fatimah Sawer Rahmat</a></li>
+        <li><a href="Curug Putri Buper Palutungan.html">Curug Putri Buper Palutungan</a></li>
+        <li><a href="Curug Landung.html">Curug Landung</a></li>
+        <li><a href="Lempong Balong.html">Lempong Balong</a></li>
+        <li><a href="Tenjo Laut.html">Tenjo Laut</a></li>
+        <li><a href="Lamping Kidang Camp Ground.html">Lamping Kidang Camp Ground</a></li>
+        <li><a href="Buper Ipukan.html">Buper Ipukan</a></li>
+        <li><a href="D'Orchid.html">D'Orchid</a></li>
+        <li><a href="Saraeland.html">Saraeland</a></li>
+        <li><a href="Arunika Eatery.html">Arunika Eatery</a></li>
+        <li><a href="Bubulak Food and View.html">Bubulak Food and View</a></li>
+        <li><a href="Ipukan Highland.html">Ipukan Highland</a></li>
+        <li><a href="Pondok Cai Pinus.html">Pondok Cai Pinus</a></li>
+        <li><a href="Santana Resto and Lodge.html">Santana Resto and Lodge</a></li>
+        <li><a href="Black Bine Coffee.html">Black Bine Coffee</a></li>
+    </ul> 
+  </nav>
+  
+  <article>
+    <h1>Curug Putri Buper Palutungan</h1>
+    <p>Air terjun ini memiliki ketinggian sekitar 20 meter dengan aliran air yang cukup deras. Curug tersebut tak hanya dijadikan sebagai obyek wisata saja, namun juga bisa digunakan untuk melakukan aktivitas menarik seperti berkemah dan outbound.</p>
+  </article>
+  
+  <image>
+    <h1></h1>
+  	<img src=https://lh5.googleusercontent.com/p/AF1QipO9KPncEQTTB70N5M-MU0Ho33k14YNzCwQTuTS6=w750-h813-p-k-no alt="Curug Putri Buper Palutungan" style="width:400px;height:300px;">
+  <image>
+  
+</section>
+
+<footer>
+  <p>copyright @alifiqbalrizki</p>
+</footer>
+
+</body>
+</html>

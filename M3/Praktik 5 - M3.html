@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Praktikum SIG Web Minggu ke-3 - Alif Iqbal Rizki H. - 20/460242/TK/50831</title>
+	<meta charset=”utf-8″>
+<head>
+
+<body>
+  <h2>Menampilkan Bilangan Fibonacci s.d. Angka yang Dipilih</h2>
+  <p>Masukkan batas angka untuk menampilkan semua bilangan fibonacci tersebut: </p>
+  <input type="text" id="angka" />
+
+  <button type="button" onclick="ShowFbc(angka.value)">Tampilkan!</button><br/><br/> 
+  Hasil : <span id="tampil"></span>
+
+    <script>
+      var ShowFbc = function (x)  
+      {
+        if (x==1) {
+        var loop = [0, 1];
+        return loop;
+        document.getElementById("tampil").innerHTML = loop;
+        } 
+
+        else {
+        var a = ShowFbc(x - 1);
+        a.push(a[a.length - 1] + a[a.length - 2]);
+        document.getElementById("tampil").innerHTML = a;
+        return a;
+        }
+      };
+    </script>
+</body>
+</html>

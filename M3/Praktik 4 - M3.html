@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Praktikum SIG Web Minggu ke-3 - Alif Iqbal Rizki H. - 20/460242/TK/50831</title>
+	<meta charset=”utf-8″>
+</head> 
+
+<body> 
+    <h2>Menampilkan Bilangan Prima s.d. Angka yang Dipilih</h2>
+    <p>Masukkan batas angka untuk menampilkan semua bilangan prima tersebut: </p>
+    Input Angka : <input type="text" id="angka" style="margin-left: 12px; margin-bottom: 12px"> <br>
+
+    <button type="button" onclick="ShowPrima()">Tampilkan!</button><br/><br/> 
+    Hasil : <span id="tampil"></span> 
+
+        <script> 
+            function ShowPrima() 
+            { 
+                var x = document.getElementById("angka").value; 
+
+                if(x>=0){ 
+                    for(a=2;a<=x;a++){ 
+                        var bilprima=false; 
+                        for(b=2;b<a;b++){ 
+                        if(a%b==0)bilprima=true; 
+                        } 
+        
+                        if(!bilprima){ 
+                            if(a>2){
+                             document.getElementById("tampil").innerHTML+=", "; 
+                            }            
+                        document.getElementById("tampil").innerHTML+=a;      
+                        } 
+                    } 
+                }   
+            } 
+        </script> 
+</body> 
+</html> 
